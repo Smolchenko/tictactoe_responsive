@@ -1,0 +1,113 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.game {
+  display: flex;
+  flex: 1;
+  zoom: 1.2;
+  margin-top: 50px;
+}
+
+.game-board,
+.game-info {
+  flex: 1;
+}
+
+.game-info {
+  display: flex;
+  flex-direction: row;
+}
+
+.game-info > div {
+  width: 20%;
+}
+
+ul {
+  margin: 0;
+  width: 80%;
+  display: flex;
+}
+
+ul.asc {
+  flex-direction: column;
+}
+
+ul.desc {
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+}
+
+li {
+  display: flex;
+}
+
+button {
+  border: 1px solid gray;
+  background-color: #fff;
+  height: max-content;
+  padding: 10px;
+  margin: 5px;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  width: 170px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.reset {
+  background-color: rgb(229, 215, 247);
+}
+
+.reset:disabled {
+  cursor: default;
+}
+
+.sort {
+  background-color: whitesmoke;
+  width: 70px;
+}
+
+.footer {
+  font-size: 14px;
+  position: relative;
+  bottom: 40px;
+  margin-top: 80px;
+}
+
+@media (max-width: 767px) {
+  .game {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .game-board {
+    flex: 0 1;
+  }
+
+  .game-info {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .game-info > div {
+    width: auto;
+  }
+
+  .game-info ul {
+    width: 100%;
+    padding: 0;
+  }
+
+  .footer {
+    font-size: 16px;
+  }
+}
