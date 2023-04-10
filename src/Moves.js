@@ -5,7 +5,6 @@ const Moves = ({ history, onGoToPreviousStep }) => {
   const [isAscending, setIsAscending] = useState(true);
   const handleSort = () => setIsAscending(!isAscending);
 
-  // improvement below -
   const nullCount = useMemo(() => {
     return history[history.length - 1].reduce(
       (count, square) => count + (square === null ? 1 : 0),
@@ -21,7 +20,7 @@ const Moves = ({ history, onGoToPreviousStep }) => {
         Math.floor(differenceIndex / 3) + 1
       ).toFixed()})`;
     };
-  }, []); // why an empty dependency array?
+  }, []);
 
   // const formattedLastMove = useMemo(() => {
   //   return formatLastMove(differenceIndex);
